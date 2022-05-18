@@ -1,28 +1,28 @@
 # AI-Ingredients-Classification-IBMChatbot
-Projeto de classificação de ingredientes através de redes neurais, e implementação de chatbot funcional capaz de conversar por mensagens de voz, integrado ao telegram
+>Projeto de *classificação de ingredientes* através de redes neurais, e implementação de *chatbot* funcional capaz de conversar por *mensagens de voz*, integrado ao telegram
 ### Artificial Intelligence - Deep Learning - Neural Network - Chatbot
+<br>
 
-**Grupo**
+**Turma** 2TDSA<br>
+**Ano** 2022
+<h1>Grupo</h1>
 
-André dos Santos Menezes de Souza
+**NOME:** André dos Santos Menezes de Souza<br>
 RM: 88112
 
-Giulio Cesar Costa Bernardi
-RM: 86993
+**NOME:** Giulio Cesar Costa Bernardi<br>
+**RM:** 86993
         
-Kaike de Santana Queiroz Ferreira
-RM: 88473
+**NOME:** Kaike de Santana Queiroz Ferreira<br>
+**RM:** 88473
 
-Raissa Rassilan
-RM: 89011
+**NOME:** Raissa Rassilan<br>
+**RM:** 89011
+<br><br>
 
-**Turma** 2TDSA
+<h1>Descrição</h1>
 
-**Ano** 2022
-
-## Descrição
-
-Projeto de classificação de ingredientes através de redes neurais, e implementação de chatbot funcional capaz de conversar por mensagens de voz,
+Projeto de classificação de ingredientes através de redes  neurais, e implementação de chatbot funcional capaz de conversar por mensagens de voz,
 integrado ao telegram.
 
 **Ingredientes:**
@@ -45,27 +45,26 @@ Decidimos fazer com os ingredientes básicos de um strogonoff
 ##### PREDIÇÃO REALIZADA A PARTIR DO LINK DE UMA IMAGEM || 98% DE ACURÁCIA
 ![q1Z1WPv](https://user-images.githubusercontent.com/69649552/169068069-f481330c-e76b-42bd-9892-99eaf8150913.png)
 
-## Assista e veja como tudo isso funciona:
+<h1>Assista e veja como tudo isso funciona:</h1>
 https://www.youtube.com/watch?v=HnProG0Fpyw
+
+<br>
 
 ## Como usar 
 
-### Chatbot:
+[Converse com o chatbot agora mesmo](http://t.me/OfficialBrightBot)
 
-http://t.me/OfficialBrightBot
-
-----------------------------------------------------------------------------------------------------------------------------
-
-### Classificador de Ingredientes:
+<br>
+<h1>Classificador de Ingredientes:</h1>
 
 *Linguagem:*
 * Python
 
 *Bibliotecas:*
-* Tensorflow
-* MatplotLib
-* Numpy
-* Image
+* [Tensorflow](https://www.tensorflow.org/api_docs)
+* [MatplotLib](https://matplotlib.org/)
+* [Numpy](https://numpy.org/)
+* [Image](https://pillow.readthedocs.io/en/stable/#:~:text=The%20Python%20Imaging%20Library%20adds%20image%20processing%20capabilities,data%20stored%20in%20a%20few%20basic%20pixel%20formats.)
 
 Para predizer uma imagem, coloque a url dela na função que está localizada no final do arquivo do projeto ( conforme imagem acima <a href="#predição-realizada-a-partir-do-link-de-uma-imagem--98-de-acurácia">Clique aqui</a> ).
 
