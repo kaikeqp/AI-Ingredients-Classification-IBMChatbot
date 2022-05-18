@@ -51,10 +51,10 @@ https://www.youtube.com/watch?v=HnProG0Fpyw
 <br>
 
 ## Como usar 
-
+### Chatbot:
 http://t.me/OfficialBrightBot
 <br>
-<h1>Classificador de Ingredientes:</h1>
+### Classificador de Ingredientes:
 
 *Linguagem:*
 * Python
