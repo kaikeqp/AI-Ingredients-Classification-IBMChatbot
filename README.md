@@ -53,7 +53,6 @@ https://www.youtube.com/watch?v=HnProG0Fpyw
 ## Como usar 
 
 http://t.me/OfficialBrightBot
-
 <br>
 <h1>Classificador de Ingredientes:</h1>
 
