@@ -1,0 +1,444 @@
+{
+  "intents": [
+    {
+      "intent": "negacao",
+      "examples": [
+        {
+          "text": "nao"
+        },
+        {
+          "text": "não"
+        },
+        {
+          "text": "negativo"
+        },
+        {
+          "text": "nem"
+        },
+        {
+          "text": "nn"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "nop"
+        },
+        {
+          "text": "nunca"
+        }
+      ]
+    },
+    {
+      "intent": "receitaDuvida",
+      "examples": [
+        {
+          "text": "não sei o que comer"
+        },
+        {
+          "text": "não sei o que fazer pra jantar"
+        },
+        {
+          "text": "passa alguma receita ai"
+        },
+        {
+          "text": "quero fazer algo pra comer"
+        },
+        {
+          "text": "quero uma receita"
+        },
+        {
+          "text": "tenho umas coisas aqui mas não sei o que fazer"
+        },
+        {
+          "text": "to afim de comer algo"
+        },
+        {
+          "text": "to com fome"
+        },
+        {
+          "text": "vc sabe o que da pra fazer com as coisas que tenho aqui?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "bem"
+        },
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "eae"
+        },
+        {
+          "text": "e ai"
+        },
+        {
+          "text": "eai chatbot"
+        },
+        {
+          "text": "eai naruto"
+        },
+        {
+          "text": "eai robo"
+        },
+        {
+          "text": "fala parça"
+        },
+        {
+          "text": "iai"
+        },
+        {
+          "text": "iai bot"
+        },
+        {
+          "text": "Kon'nichiwa"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "oi bright"
+        },
+        {
+          "text": "oii"
+        },
+        {
+          "text": "ooi"
+        },
+        {
+          "text": "opa"
+        },
+        {
+          "text": "salve"
+        },
+        {
+          "text": "slv"
+        },
+        {
+          "text": "to bem parça"
+        },
+        {
+          "text": "to mec"
+        }
+      ]
+    },
+    {
+      "intent": "SaudacaoPergunta",
+      "examples": [
+        {
+          "text": "bem e vc"
+        },
+        {
+          "text": "eai beleza"
+        },
+        {
+          "text": "eai blz"
+        },
+        {
+          "text": "Olá tudo bom"
+        },
+        {
+          "text": "suave cahorro"
+        },
+        {
+          "text": "SUAVEE CACHORROO"
+        },
+        {
+          "text": "suave parça"
+        },
+        {
+          "text": "suave parceiro"
+        },
+        {
+          "text": "tudo bem"
+        }
+      ]
+    },
+    {
+      "intent": "sim",
+      "examples": [
+        {
+          "text": "arran"
+        },
+        {
+          "text": "claro"
+        },
+        {
+          "text": "lógico que conheço"
+        },
+        {
+          "text": "positivo"
+        },
+        {
+          "text": "si"
+        },
+        {
+          "text": "sim"
+        },
+        {
+          "text": "sim eu sou"
+        },
+        {
+          "text": "ss"
+        }
+      ]
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_1_1652626773470",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá sou BrightBot"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1652626163019"
+    },
+    {
+      "type": "standard",
+      "title": "Receita Duvida",
+      "output": {
+        "generic": [
+          {
+            "title": "Vamos lá então!",
+            "options": [
+              {
+                "label": "Envie uma foto de seus ingredientes",
+                "value": {
+                  "input": {
+                    "text": "imagem"
+                  }
+                }
+              },
+              {
+                "label": "Diga por voz ou texto seus ingredientes",
+                "value": {
+                  "input": {
+                    "text": "texto"
+                  }
+                }
+              }
+            ],
+            "description": "Para te ajudar vou precisar conhecer os ingredientes que você tem, para isso:",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#receitaDuvida",
+      "dialog_node": "node_1_1652626773470",
+      "previous_sibling": "node_8_1652627366323"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sem problemas, quando precisar é só me chamar"
+              },
+              {
+                "text": "Okay, mas se precisar é só me chamar"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_3_1652625963571",
+      "conditions": "#negacao",
+      "dialog_node": "node_2_1652626486685",
+      "previous_sibling": "node_4_1652626366844"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá"
+              },
+              {
+                "text": "E aí"
+              },
+              {
+                "text": "Salve"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_3_1652623954618",
+      "previous_sibling": "node_10_1652626163019"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Como posso te ajudar?"
+              },
+              {
+                "text": "Como posso ser útil a você?"
+              },
+              {
+                "text": "Afim de algo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1652623954618",
+      "conditions": "true",
+      "dialog_node": "node_3_1652625963571"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Legal, o que deseja?"
+              },
+              {
+                "text": "Show, pode falar que vejo se posso te ajudar"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_3_1652625963571",
+      "conditions": "#sim",
+      "dialog_node": "node_4_1652626366844"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tudo bem. qual seu nome?"
+              },
+              {
+                "text": "To legal. como você se chama?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#SaudacaoPergunta",
+      "dialog_node": "node_8_1652627366323",
+      "previous_sibling": "node_3_1652623954618"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<?input.text.extract('\\w+$', 0)?> , que nome bonito! Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1652627366323",
+      "conditions": "true",
+      "dialog_node": "node_8_1652627428790"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "BrightBot",
+  "language": "pt-br",
+  "description": ""
+}
