@@ -73,7 +73,7 @@ Para predizer uma imagem, coloque a url dela na função que está localizada no
 
 ## Para clonar esse repositório:
 
-    git clone [https://github.com/kaikeqp/AI-Ingredients-Classification-IBMChatbot]
+    git clone https://github.com/kaikeqp/AI-Ingredients-Classification-IBMChatbot
     cd AI-Ingredients-Classification-IBMChatbot
     ls
 
