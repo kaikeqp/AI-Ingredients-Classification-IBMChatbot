@@ -8,7 +8,7 @@
 <h1>Grupo</h1>
 
 **NOME:** André dos Santos Menezes de Souza<br>
-RM: 88112
+**RM:** 88112
 
 **NOME:** Giulio Cesar Costa Bernardi<br>
 **RM:** 86993
