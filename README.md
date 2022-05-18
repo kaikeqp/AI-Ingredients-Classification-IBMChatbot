@@ -52,7 +52,7 @@ https://www.youtube.com/watch?v=HnProG0Fpyw
 
 ## Como usar 
 
-[Converse com o chatbot agora mesmo](http://t.me/OfficialBrightBot)
+http://t.me/OfficialBrightBot
 
 <br>
 <h1>Classificador de Ingredientes:</h1>
